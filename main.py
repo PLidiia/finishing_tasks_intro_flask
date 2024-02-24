@@ -5,7 +5,7 @@ app = Flask('__main__')
 
 @app.route('/')
 def main():
-    return 'Миссия Колонизация Марс'
+    return 'Миссия Колонизация Марсa'
 
 
 @app.route('/image_mars')
@@ -17,9 +17,10 @@ def do_image_mars():
 </head>
 <body>
 <h1>Жди нас, Марс!</h1>
-<figure><img src="/static/img/Mars.png" alt="здесь должна была быть картинка, но не нашлась"><figcaption>Вот она какая, красная планета</figcaption></figure>
+<img src="{url_for("static", filename="img/mars.png")}">
+<p>Вот она какая, красная планета!</p>
 </body>
-    </html>'''
+</html>'''
 
 
 if __name__ == '__main__':
